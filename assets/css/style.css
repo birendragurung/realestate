@@ -1,0 +1,14 @@
+.col-left, .col-right{
+	width: 50%;
+	display: inline-block;
+	float: left;
+	/* margin-left: -1px; */
+}
+
+.data-property-div {
+    background-color: aliceblue;
+    margin: 5px 5px 0 0;
+    padding: 9px;
+    font-family: consolas;
+    float: left;
+}
