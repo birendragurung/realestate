@@ -105,11 +105,11 @@
 			        var parameters = {
 			            'entry-name': $('#entry-name').val(),
 			            'entry-description': $('#entry-description').val(),
-			            'entry-address': $('#entry-name').val(),
+			            'entry-address': $('#entry-address').val(),
 			            'entry-path': 'uploads/image.jpg',
 			            'reload-data': true,
 			            'thumb': curr_thumb,
-			            'price': $('')
+			            'price': $('#entry-price'),
 			            onSuccess: function(data) {
 			                if (data == undef) {
 			                    return;
@@ -179,5 +179,5 @@
 
 			}); 
 		</script>
-		</body>
-	</html>
+	</body>
+</html>
