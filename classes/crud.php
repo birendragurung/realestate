@@ -58,29 +58,31 @@ class Crud
     		$desc 		= $_POST['entry-description'];
     		$address 	= $_POST['entry-address'];
             $reload_data= $_POST['reload-data'] ;
-                        $thumb= $_POST['thumb'] ;
-                            if (substr($thumb, 0, 4) == 'data') {
-                                $filteredData=substr($thumb, strpos($thumb, ",")+1);
+            $price      = $_POST['entry-price'];
+            $thumb      = $_POST['property-image'] ;
+            if (substr($thumb, 0, 4) == 'data') {
+                $filteredData=substr($thumb, strpos($thumb, ",")+1);
  
-//Decode the string
-$unencodedData=base64_decode($filteredData);
- $date = new DateTime();
-$filename =   $date->getTimestamp().'.jpeg';
-//Save the image
-file_put_contents(ROOT . 'uploads/'.$filename, $unencodedData);
+            //Decode the string
+            $unencodedData=base64_decode($filteredData);
+             $date = new DateTime();
+            $filename =   $date->getTimestamp().'.jpeg';
+            //Save the image
+            file_put_contents(ROOT . 'uploads/'.$filename, $unencodedData);
 
-        // $image_data = saveImage($thumb, $file);
+            // $image_data = saveImage($thumb, $file);
     }
     		$values 	= array(
     							'name' 			=> $pro_name,
     							'description'	=> $desc,
     							'address'		=> $address,
-    							'post_status'	=> 'published',
-    							'created_at'	=> date('Y/ d/ M H:i'),
-    							'updated_at'	=> date('y d m h i s'),
+    							// 'post_status'	=> 'published',
+                                'price'         => $price,
+    							// 'created_at'	=> date('Y/ d/ M H:i'),
+    							// 'updated_at'	=> date('y d m h i s'),
                                 'img'           =>  $filename
     			);
-    		$msg 		= $this->db->insert( 'properties' , $values);
+    		$msg = $this->db->insert( 'properties' , $values);
     		if ($reload_data == true) {
                 $msg = $this->getProject();
             };
@@ -93,7 +95,7 @@ file_put_contents(ROOT . 'uploads/'.$filename, $unencodedData);
         return $this->create();
     }
 
-    public function fetch_all()
+    public function  fetch_all()
     {
     	return $this->db->select('properties', '*');
     }
@@ -118,14 +120,15 @@ file_put_contents(ROOT . 'uploads/'.$filename, $unencodedData);
 
         foreach ($data as $key => $value) {
             $project = array(
-                "id" => $value["id"],
-                "name" => $value["name"],
-                "description" => $value['description'],
-                "address" => $value['address'],
-                "post_status" => $value['post_status'],
-                "updated_at" => $value['updated_at'],
-                "author" => $value['author'],
-                "image"     => $value['img']
+                "id"            => $value["id"],
+                "name"          => $value["name"],
+                "description"   => $value['description'],
+                "address"       => $value['address'],
+                // "post_status"   => $value['post_status'],
+                // "updated_at"    => $value['updated_at'],
+                // "author"        => $value['author'],
+                "image"         => $value['img'],
+                "price"         => $value['price']
             );
             array_push($projects, $project);
         // $output .=  table_tr( table_td($value['name']) . table_td($value['description']) . table_td($value['address']) . table_td($value['post_status']) . table_td($value['created_at']) . table_td($value['updated_at']) . table_td($value['author']) );

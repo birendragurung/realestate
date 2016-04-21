@@ -8,13 +8,13 @@ db.url = "classes/crud.php";
 
 db.getProject = function (parameters) {
     parameters.function = "getProject";
-    parameters.userId = estate.userId;
+    // parameters.userId = estate.userId;
     this.sendRequest(parameters);
 };
 
 db.addProject = function (parameters) {
     parameters.function = "addProject";
-    parameters.userId = estate.userId;
+    // parameters.userId = estate.userId;
     this.sendRequest(parameters);
 };
 
