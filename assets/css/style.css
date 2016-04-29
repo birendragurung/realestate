@@ -1,14 +1,131 @@
-.col-left, .col-right{
+/*
+    header styling
+*/
+/*header{
+    height: 30px;
+    z-index: 1000;
+    width: 100%;
+    position: fixed;
+    height: 50px;
+    background-color: green;
+}*/
+.home-content{
+    margin: 0px;
+    width: 100%;
+    
+}
+.home-search, .property-lists{
+
 	width: 50%;
 	display: inline-block;
 	float: left;
+	height: 100%;
 	/* margin-left: -1px; */
 }
-
+.home-search{
+	position: fixed;
+}
+.property-lists{
+	margin-left:50%;
+}
 .data-property-div {
+    position: relative;
     background-color: aliceblue;
     margin: 5px 5px 0 0;
     padding: 9px;
     font-family: consolas;
     float: left;
+    background-repeat: no-repeat;
+    height: 100px;
+    width: 300px;
+    background-size: cover;
+    box-shadow: 0px -52px 54px -25px black inset;
+    background-position-y: 50%;
+}
+div#main{
+	position: relative;
+}
+
+#data-entry{
+	position:relative;
+}
+
+.row{
+	position: relative;
+	margin-top: 15px;
+}
+
+#data-entry .row label {
+    /* color: #808283; */
+    /* position:absolute; */
+}
+
+#data-entry input{
+	position:absolute;
+	left: 169px;
+}
+
+
+#entry-submit{
+    color: rgba(0, 0, 0, 0.47);
+    width: 110px;
+    position: absolute;
+    /* bottom: 0; */
+    /* right: 0; */
+    /* z-index: 1000; */
+    height: 41px;
+    border-radius: 6px;
+    background-color: rgba(33, 150, 243, 0.12);
+    font-weight: 900;
+    font-size: 23px;
+    letter-spacing: 3px;
+    border: 1px solid rgb(228, 243, 254);
+}
+
+.data-property-div div{
+	position: absolute;
+	color: #fff;
+	font-weight: 700;
+	font-family: cursive;
+}
+
+.overlay{
+	background-color:red;
+	z-index:2;
+	grid-area: ;
+}
+
+.data-property-div div:nth-child(1){
+	bottom: 60px;
+	left: 30px;
+	background-color: rgba(130, 210, 30, 0.21);
+}
+
+.data-property-div div:nth-child(2){
+	bottom: 43px;
+	left: 30px;
+}
+
+.data-property-div div:nth-child(3){
+	left: 50px;
+	bottom: 25px;
+	color: bisque;
+	font-family: cursive;
+}
+
+.data-property-div div:nth-child(4){
+	right: 5px;
+	bottom: 5px;
+	background-color: azure;
+	color: cadetblue;
+	padding: 4px  21px;
+	position: absolute;
+}
+select#home_type {
+    margin-left: 81px;
+    position: absolute;
+}
+select#no_of_beds {
+    position: absolute;
+    margin-left: 77px;
 }
