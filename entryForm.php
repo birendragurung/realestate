@@ -23,6 +23,7 @@ if (isset($_POST['submit'])) {
 <body>
 <div id="main">
     <div id="data-entry">
+        <div class="agent-listing"></div>
         <form id="entry_form" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" enctype="multipart/form-data">
             <div class="map" id="google_map" style="width: 500px; height: 400px;">
 
