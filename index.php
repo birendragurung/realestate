@@ -3,6 +3,7 @@
     include_once "php/core/crud.php";
     include_once "php/helpers/html.php";
     $crud = new Crud();
+    $crud->cookieHandler();
 ?>
 <!DOCTYPE html>
 <html>
