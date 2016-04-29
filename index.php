@@ -3,13 +3,6 @@
     include_once "php/core/crud.php";
     include_once "php/helpers/html.php";
     $crud = new Crud();
-    function parseProperty($dataResult){
-        $output ="";
-        foreach ($dataResult as $key => $project) {
-        $output  .= html_div(html_div($project['name']) . html_div($project['description']) . html_div($project['address']) . html_div($project['price']) , "class='data-property-div' style='background-image:url(" .UPLOADS_PATH. $project['img'].")'");
-        }
-        return $output;
-    }
 ?>
 <!DOCTYPE html>
 <html>
@@ -37,9 +30,16 @@
                             </select>
                         </div>
                         <div id="search_box">
-                            <input type="text" id="search_text">
-                            <div class="search-button">Search</div>
+                            <form action="searchResult.php" >
+                                <input type="text" id="search_text" name="q">
+                                <input type="submit">
+                                <!--                            <div class="search-button">Search</div>-->
+                            </form>
+
                         </div>
+                        <script>
+                            $.('#search_box input#search_text')
+                        </script>
                     </div>
                 </div>
             </div>
@@ -82,5 +82,6 @@
                 </div> -->
             </div>
         </div>
+
     </body>
 </html>

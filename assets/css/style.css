@@ -16,6 +16,7 @@ header{
 	/* margin-left: -1px; */
 }
 .home-search{
+	background-color: #03705B;
 	position: fixed;
 	/* float: left; */
 }
@@ -55,7 +56,7 @@ div#main{
     /* position:absolute; */
 }
 
-#data-entry input{
+#data-entry .row input,#data-entry .row select, #data-entry .row textarea{
 	position:absolute;
 	left:150px;
 }
