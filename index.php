@@ -4,7 +4,7 @@
 	include_once "php/helpers/html.php";
 	$crud = new Crud();
 
-
+//
 // 	function parseProperty($dataResult){
 // 		$output ="";
 //             foreach ($dataResult as $key => $project) {
