@@ -88,6 +88,7 @@ template {
 
 a {
   background-color: transparent;
+  color: #0074e4;
 }
 
 /**
@@ -98,6 +99,7 @@ a {
 a:active,
 a:hover {
   outline: 0;
+  color: #2271BD;
 }
 
 /* Text-level semantics

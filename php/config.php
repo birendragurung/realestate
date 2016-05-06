@@ -33,6 +33,19 @@ define("CSS_PATH" , ASSETS_PATH . "css/");
  * css folder path
  */
 define("JS_PATH" , ASSETS_PATH . "js/");
-
+/**
+ * uploads path
+ */
 define("UPLOADS_PATH" , base_url() . "uploads/");
-
+/**
+ * php helpers path
+ */
+define("HELPERS", ROOT . "php/helpers/");
+/**
+ * includes folder path
+ */
+define("INCLUDES_PATH" , ROOT . "includes/");
+/**
+ * Template folder path
+ */
+define("TEMPLATE_PATH" , INCLUDES_PATH . "template/");

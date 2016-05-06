@@ -67,3 +67,11 @@ function parseSingleProperty($data = [])
     }
 
 }
+
+function getTemplate( $data = "")
+{
+    if ($data == "") {
+        return false;
+    }
+    include_once TEMPLATE_PATH . $data . ".php";
+}

@@ -26,8 +26,3 @@ class Cookie
         setcookie($cookie_name, $cookie_value ,time() + (86400 * 30), "/");
     }
 }
-
-
-$cookie = new Cookie();
-$a =$cookie->setCookie();
-echo true;

@@ -1,15 +1,6 @@
 <?php
 include_once "php/config.php";
 include_once "php/core/crud.php";
-//include_once ""
-
-
-
-/**
- *
- *
- *
- */
 ?>
 <!DOCTYPE html>
 <html>
@@ -17,6 +8,7 @@ include_once "php/core/crud.php";
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Search Results</title>
+    <link rel="dns-prefetch" href="http://fonts.googleapis.com/">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/normalize.css">
     <script src="assets/js/libs/jquery.js"></script>
@@ -33,7 +25,6 @@ include_once "php/core/crud.php";
             <form action="searchResult.php" >
                 <input type="text" id="search_text" name="q">
                 <input type="submit">
-                <!--                            <div class="search-button">Search</div>-->
             </form>
 
         </div>
@@ -91,7 +82,7 @@ include_once "php/core/crud.php";
     function projectToTable(data) {
         var projects = data; //JSON.parse(data);
         var div = $("<div id = 'data-content'>");
-//        var tableHead = $("<thead>");
+        var tableHead = $("<thead>");
         for (var i = 0; i < projects.length; i++) {
             var project = projects[i];
             var output  = html_div(html_div(project['name']) + html_div(project['description']) + html_div(project['address']) + html_div(project['price']), "data-property-div");

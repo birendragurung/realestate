@@ -10,15 +10,14 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Real Estate</title>
+        <link rel="dns-prefetch" href="http://fonts.googleapis.com/">
         <link rel="stylesheet" href="<?php echo CSS_PATH . 'normalize.css'; ?>">
         <link rel="stylesheet" href="<?php echo CSS_PATH . 'style.css'; ?>">
     </head>
-    <body>
-        <header>
-            <div id="logo">Real Estate</div>
-        </header>
+    <body id="index">
+<!--        --><?php //getTemplate("header"); ?>
         <div class="home-content">
-            <div class="home-search">
+            <div class="home-search-container">
                 <div class="home-search-wrapper">
                     <h3>Your home for real estate.</h3>
                     <div class="search-container">
@@ -38,7 +37,7 @@
 
                         </div>
                         <script>
-                            $.('#search_box input#search_text')
+//                            $.('#search_box input#search_text')
                         </script>
                     </div>
                 </div>
@@ -82,6 +81,6 @@
                 </div> -->
             </div>
         </div>
-
+<!--        --><?php //getTemplate("footer"); ?>
     </body>
 </html>
