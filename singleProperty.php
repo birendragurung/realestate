@@ -9,7 +9,7 @@ if (isset($_GET) && isset($_GET['property-id'])) :
     include_once "php/config.php";
     include_once "php/core/crud.php";
     $crud = new Crud();
-    $sql = "SELECT * FROM properties WHERE id = {$property_id}";
+    $sql = git s"SELECT * FROM properties WHERE id = {$property_id}";
     $propertyDetails = $crud->getPropertyBySql($sql);
     if ($propertyDetails == false) {
         $message = "Property not found";
